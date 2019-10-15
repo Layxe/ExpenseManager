@@ -1,45 +1,29 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <h1>Hinzufügen</h1>
+    <form>
+      <label for="money">Betrag: </label>
+      <input name="money" type="number" min="0.01" step="0.01" value="0.01"><span> €</span> 
+      <br><br>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Hello World!</title>
-</head>
+      <label for="desc">Beschreibung: </label>
+      <textarea name="desc"></textarea> 
+      <br><br>
 
-<body>
-  <h1>Add Page</h1>
-  <div>
-    <div>
-      <div>
-        <h5>Betrag: </h5>
-        <input type="number" min="0.01" step="any">
-      </div>
-      <div>
-        <button type="button" name="addCategory"><a href="#">dummy1</a></button>
-        <button type="button" name="removeCategory"><a href="#">dummy2</a></button>
-      </div>
-      <div>
-        <button type="button" name="addDescription"><a href="#">dummy3</a></button>
-        <h5>Beschreibung hinzufügen</h5>
-      </div>
-    </div>
-    <div>
-      <di>
-        <h5>Datum:</h5>
-        <input type="date">
-      </di>
-      <div>
-        <div>
-          <button type="cancel" name="cancelButton">Abbrechen</button>
-          <button type="reset" name="resetButton">Zurücksetzen</button>
-        </div>
-        <div>
-          <button type="submit" name="submitButton">Senden</button>
-        </div>
-      </div>
-    </div>
-  </div>
+      <label for="date">Datum: </label>
+      <input name="date" type="date">
+      <br><br>
 
-</body>
+      <button>Senden</button>
+      <button><a href="index.html">Abbrechen</a></button>
+      <button>Zurücksetzen</button>
 
+    </form>
+  </body>
 </html>
