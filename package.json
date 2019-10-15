@@ -1,0 +1,23 @@
+{
+  "name": "expensemanager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Layxe/ExpenseManager.git"
+  },
+  "author": "Leonhard Kraft, Alexander Niedermayer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Layxe/ExpenseManager/issues"
+  },
+  "homepage": "https://github.com/Layxe/ExpenseManager#readme",
+  "devDependencies": {
+    "electron": "^6.0.12"
+  }
+}
