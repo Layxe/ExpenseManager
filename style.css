@@ -40,11 +40,6 @@ form {
     margin: 50px auto;
 }
 
-form > label {
-    display: inline-block;
-    width: 200px;
-}
-
 form > textarea {
     width: 400px;
     height: 100px;
