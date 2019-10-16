@@ -48,6 +48,7 @@ form > label {
 form > textarea {
     width: 400px;
     height: 100px;
+    resize: none;
 }
 
 a {
