@@ -1,0 +1,60 @@
+html, body {
+    margin: 0;
+    height: 95%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.panel {
+    width: 50%;
+    float: left;
+    text-align: center;
+    height: 100%;
+}
+
+.panel > div {
+    margin: 20% auto;
+    width: 90%;
+    transition: 200ms linear all;
+    border-radius: 10px;
+    font-size: 35vw;
+    cursor: pointer;
+}
+
+.panel > div > img {
+    width: 100%;
+    height: 100%;
+}
+
+.panel > div:hover {
+    transform: scale(1.02);
+    background-color: #ecf0f1;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    width: 400px;
+    display: block;
+    margin: 50px auto;
+}
+
+form > label {
+    display: inline-block;
+    width: 200px;
+}
+
+form > textarea {
+    width: 400px;
+    height: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:active {
+    color: black;
+}

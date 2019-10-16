@@ -3,10 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body>
-    <h1>Start Page</h1>
-    <a href=""><img src="https://image.freepik.com/free-icon/graph_318-10306.jpg" alt="expense visualization" width="300" height="300" /></a>
-    <a href="addPanel.html"><img src="https://www.clipartwiki.com/clipimg/detail/96-964509_file-folder-png-add-to-folder-icon.png" alt="add expense" width="300" height="300" /></a>
+    <div class="panel">
+      <div>
+        <i class="fas fa-chart-bar"></i>
+      </div>
+    </div>
+    <div class="panel">
+      <div onclick="location.href = 'addPanel.html'">
+        <i class="fas fa-plus-square"></i>
+      </div>
+    </div>
   </body>
 </html>
