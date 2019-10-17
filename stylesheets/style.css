@@ -46,7 +46,6 @@ form {
 form > textarea {
     width: 400px;
     height: 100px;
-    resize: none;
 }
 
 a {
@@ -57,8 +56,6 @@ a {
 a:active {
     color: black;
 }
-<<<<<<< HEAD:style.css
-=======
 
 #description {
     overflow: hidden;
@@ -70,4 +67,3 @@ a:active {
     overflow: hidden;
     transition: 300ms linear opacity;
 }
->>>>>>> a3c187f0430c235ea0f5f5764f4743e95ec7a736:stylesheets/style.css
