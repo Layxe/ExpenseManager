@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
     <style>
       body {
         height: auto;
@@ -28,14 +28,14 @@
 
       <br>
 
-      <button class="button is-primary">Beschreibung hinzufügen</button>
-      <br>
+      <div class="button is-primary" id="descr-button" onclick="show()">Beschreibung hinzufügen</div>
+      <br><br>
       <div id="description">
-        <textarea class="textarea" resize></textarea>
+        <label class="label">Beschreibung:</label>
+        <textarea class="textarea"></textarea>
         <br>
         <div class="buttons">
-          <a href="#" class="button is-success">Speichern</a>
-          <a href="#" class="button is-danger">Abbrechen</a>
+          <a href="#" class="button is-danger" onclick="hide()">Beschreibung Löschen</a>
         </div>
       </div>
       <br>
@@ -66,6 +66,6 @@
     </div>
     </form>
 
-    <script src="addPanel.js"></script>
+    <script src="javascripts/addPanel.js"></script>
   </body>
 </html>
