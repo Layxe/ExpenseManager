@@ -12,7 +12,7 @@ const { app, BrowserWindow } = require('electron')
 const width  = 1000,
       height = 800,
       minWidth = 800,
-      height = 800
+      minHeight = 800
 
 const title = 'Expense Manager'
 
