@@ -1,54 +1,71 @@
+// Imports
+// #####################################################################################################################
 const { app, BrowserWindow } = require('electron')
 
-// Behalten Sie eine globale Referenz auf das Fensterobjekt. 
-// Wenn Sie dies nicht tun, wird das Fenster automatisch geschlossen, 
-// sobald das Objekt dem JavaScript-Garbagekollektor übergeben wird.
+// Variablen
+// #####################################################################################################################
+
+/**
+ * Höhe und Breite des Fensters
+ */
+
+const width  = 800,
+      height = 650
+
+/**
+ * Globale Referenz auf das Fenster
+ */
 
 let win
 
+// Funktionen
+// #####################################################################################################################
+
 function createWindow () {
-  // Erstellen des Browser-Fensters.
+
+  // Erstelle das Browser Fenster
   win = new BrowserWindow({
-    width: 800,
-    height: 650,
+
+    width: width,
+    height: height,
     webPreferences: {
       nodeIntegration: true
     }
+
   })
 
-  // and load the index.html of the app.
+  // Lade die Startseite
   win.loadFile('index.html')
 
-  // Öffnen der DevTools.
-  win.webContents.openDevTools()
+  //win.webContents.openDevTools()
 
-  // Ausgegeben, wenn das Fenster geschlossen wird.
+  // Fenster wurde geschlossen
   win.on('closed', () => {
-    // Dereferenzieren des Fensterobjekts, normalerweise würden Sie Fenster
-    // in einem Array speichern, falls Ihre App mehrere Fenster unterstützt. 
-    // Das ist der Zeitpunkt, an dem Sie das zugehörige Element löschen sollten.
     win = null
   })
+
 }
 
-// Diese Methode wird aufgerufen, wenn Electron mit der
-// Initialisierung fertig ist und Browserfenster erschaffen kann.
-// Einige APIs können nur nach dem Auftreten dieses Events genutzt werden.
+// Events
+// #####################################################################################################################
+
+// Erstelle das Fenster
 app.on('ready', createWindow)
 
-// Verlassen, wenn alle Fenster geschlossen sind.
+// Beende die App, falls alle Fenster geschlossen wurden
 app.on('window-all-closed', () => {
-  // Unter macOS ist es üblich, für Apps und ihre Menu Bar
-  // aktiv zu bleiben, bis der Nutzer explizit mit Cmd + Q die App beendet.
+
   if (process.platform !== 'darwin') {
     app.quit()
   }
+
 })
 
+// Starte die App für MacOS
 app.on('activate', () => {
-  // Unter macOS ist es üblich ein neues Fenster der App zu erstellen, wenn
-  // das Dock Icon angeklickt wird und keine anderen Fenster offen sind.
+
   if (win === null) {
     createWindow()
   }
+
 })
