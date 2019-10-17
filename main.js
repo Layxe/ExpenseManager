@@ -9,8 +9,12 @@ const { app, BrowserWindow } = require('electron')
  * Höhe und Breite des Fensters
  */
 
-const width  = 800,
-      height = 650
+const width  = 1000,
+      height = 800,
+      minWidth = 800,
+      height = 800
+
+const title = 'Expense Manager'
 
 /**
  * Globale Referenz auf das Fenster
@@ -28,6 +32,8 @@ function createWindow () {
 
     width: width,
     height: height,
+    minWidth: minWidth,
+    minHeight: minHeight,
     webPreferences: {
       nodeIntegration: true
     }
