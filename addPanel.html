@@ -2,12 +2,19 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <style>
+      body {
+        height: auto;
+      }
+    </style>
     <title>Hello World!</title>
   </head>
   <body>
-    <h1>Hinzufügen</h1>
     <form>
+<<<<<<< HEAD
       <label for="money">Betrag: </label>
       <input name="money" type="number" min="0.01" step="0.01" value="0.01"><span> €</span>
       <br><br>
@@ -15,15 +22,60 @@
       <label for="desc">Beschreibung: </label>
       <textarea name="desc"></textarea>
       <br><br>
+=======
+      <label for="money" class="label">Betrag: </label>
+      <div class="field has-addons">
+        <p class="control">
+          <input class="input" placeholder="Betrag" name="money" type="number" min="0.01" step="0.01" value="0.01">
+        </p>
+        <p class="control">
+          <a class="button is-static">
+            <strong>€</strong>
+          </a>
+        </p>
+      </div>
 
-      <label for="date">Datum: </label>
-      <input name="date" type="date">
+      <br>
+>>>>>>> a3c187f0430c235ea0f5f5764f4743e95ec7a736
+
+      <div class="button is-primary" id="descr-button" onclick="show()">Beschreibung hinzufügen</div>
       <br><br>
+      <div id="description">
+        <label class="label">Beschreibung:</label>
+        <textarea class="textarea"></textarea>
+        <br>
+        <div class="buttons">
+          <a href="#" class="button is-danger" onclick="hide()">Beschreibung Löschen</a>
+        </div>
+      </div>
+      <br>
 
-      <button>Senden</button>
-      <button><a href="index.html">Abbrechen</a></button>
-      <button>Zurücksetzen</button>
+      <label for="date" class="label">Datum: </label>
+      <input name="date" type="date" class="input" id="date-picker">
+      <br><hr>
 
+      <div class="buttons">
+        <a href="#" class="button is-success">
+          <span class="icon">
+            <i class="fas fa-save"></i>
+          </span>
+          <span>Speichern</span>
+        </a>
+        <a href="addPanel.html" class="button is-warning">
+          <span class="icon">
+            <i class="fas fa-calendar-times"></i>
+          </span>
+          <span>Zurücksetzen</span>
+        </a>
+        <a href="index.html" class="button is-danger">
+          <span class="icon">
+            <i class="fas fa-times-circle"></i>
+          </span>
+          <span>Abbrechen</span>
+        </a>
+    </div>
     </form>
+
+    <script src="javascripts/addPanel.js"></script>
   </body>
 </html>

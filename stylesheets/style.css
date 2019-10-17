@@ -1,6 +1,6 @@
 html, body {
     margin: 0;
-    height: 95%;
+    height: 100%;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -12,7 +12,9 @@ html, body {
 }
 
 .panel > div {
-    margin: 20% auto;
+    margin-top: calc(50vh - 17.5vw);
+    margin-left: auto;
+    margin-right: auto;
     width: 90%;
     transition: 200ms linear all;
     border-radius: 10px;
@@ -35,14 +37,10 @@ h1 {
 }
 
 form {
+    height: auto;
     width: 400px;
     display: block;
     margin: 50px auto;
-}
-
-form > label {
-    display: inline-block;
-    width: 200px;
 }
 
 form > textarea {
@@ -59,3 +57,17 @@ a {
 a:active {
     color: black;
 }
+<<<<<<< HEAD:style.css
+=======
+
+#description {
+    overflow: hidden;
+    height: 0px;
+    transition: 500ms linear all;
+}
+
+#descr-button {
+    overflow: hidden;
+    transition: 300ms linear opacity;
+}
+>>>>>>> a3c187f0430c235ea0f5f5764f4743e95ec7a736:stylesheets/style.css
