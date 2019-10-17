@@ -5,6 +5,11 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+      body {
+        height: auto;
+      }
+    </style>
     <title>Hello World!</title>
   </head>
   <body>
@@ -23,8 +28,16 @@
 
       <br>
 
-      <label for="desc" class="label">Beschreibung: </label>
-      <textarea name="desc" class="textarea has-fixed-size"></textarea> 
+      <button class="button is-primary">Beschreibung hinzufügen</button>
+      <br>
+      <div id="description">
+        <textarea class="textarea" resize></textarea>
+        <br>
+        <div class="buttons">
+          <a href="#" class="button is-success">Speichern</a>
+          <a href="#" class="button is-danger">Abbrechen</a>
+        </div>
+      </div>
       <br>
 
       <label for="date" class="label">Datum: </label>
@@ -53,24 +66,6 @@
     </div>
     </form>
 
-    <script>
-
-      function formatDate(date) {
-        var d = new Date(date),
-            month = '' + (d.getMonth() + 1),
-            day = '' + d.getDate(),
-            year = d.getFullYear();
-
-        if (month.length < 2) 
-            month = '0' + month;
-        if (day.length < 2) 
-            day = '0' + day;
-
-        return [year, month, day].join('-');
-    }
-
-      document.getElementById('date-picker').value = formatDate(new Date());
-    </script>
-
+    <script src="addPanel.js"></script>
   </body>
 </html>
