@@ -76,3 +76,7 @@ a:active {
     overflow: hidden;
     transition: 100ms linear opacity;
 }
+
+#value-input {
+  text-align: right;
+}
