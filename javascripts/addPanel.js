@@ -1,3 +1,4 @@
+
 // Funktionen um das Datum standardmäßig einzufügen
 // #####################################################################################################################
 
@@ -15,9 +16,11 @@ function formatDate(date) {
   return [year, month, day].join('-');
 }
 
-$(document).ready(function() {
-    $('.js-example-basic-single').select2();
-});
+$(document).ready(
+    $('#selection').select2({
+      placeholder: "Kategorie wählen...",
+    })
+);
 
 let datePicker = document.getElementById('date-picker')
 
