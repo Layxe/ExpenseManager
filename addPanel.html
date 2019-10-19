@@ -21,7 +21,7 @@
         <label for="money" class="label">Betrag: </label>
         <div class="field has-addons">
           <p class="control">
-            <input class="input" placeholder="Betrag" name="money" type="number" min="0.01" step="0.01" value="0.01">
+            <input id= "value-input" class="input" placeholder="Betrag" name="money" type="number" min="0.01" step="0.01">
           </p>
           <p class="control">
             <a class="button is-static">
@@ -47,8 +47,8 @@
       <div class="field is-grouped">
             <div class="control">
               <div class="select is-primary">
-                <select>
-                  <option>Kategorie auswählen</option>
+                <select id="selection">
+                  <option disabled selected>-Kategorie auswählen-</option>
                   <!--Auswahl soll aus abgespeicherten Kategorien besteh-->
                   <option>dynamisch geladener Inhalt</option>
                 </select>
@@ -83,7 +83,7 @@
       <br><br>
       <div id="description">
         <label class="label">Beschreibung:</label>
-        <textarea class="textarea has-fixed-size" placeholder="Beschreibung..."></textarea>
+        <textarea id="descr-textarea" class="textarea has-fixed-size" placeholder="Beschreibung..." maxlength="200"></textarea>
         <br>
         <div class="buttons">
           <a href="#" class="button is-danger" onclick="hide()">
@@ -107,7 +107,7 @@
           </span>
           <span>Speichern</span>
         </a>
-        <a href="addPanel.html" class="button is-warning">
+        <a href="#" onclick="reset()" class="button is-warning">
           <span class="icon">
             <i class="fas fa-calendar-times"></i>
           </span>
