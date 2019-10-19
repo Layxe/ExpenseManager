@@ -16,7 +16,7 @@ function formatDate(date) {
 }
 
 $(document).ready(function() {
-    $('select.js-example-basic-single').select2();
+    $('.js-example-basic-single').select2();
 });
 
 let datePicker = document.getElementById('date-picker')
