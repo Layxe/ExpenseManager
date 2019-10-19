@@ -32,6 +32,10 @@ html, body {
     background-color: #ecf0f1;
 }
 
+.input-inner-container {
+  width: 49%;
+}
+
 h1 {
     text-align: center;
 }
@@ -41,6 +45,11 @@ form {
     width: 400px;
     display: block;
     margin: 50px auto;
+}
+
+form > div {
+  display: flex;
+  justify-content: space-between;
 }
 
 form > textarea {
@@ -65,10 +74,5 @@ a:active {
 
 #descr-button {
     overflow: hidden;
-<<<<<<< HEAD
-    transition: 300ms linear opacity;
-}
-=======
     transition: 100ms linear opacity;
 }
->>>>>>> 145159fb5a85636ee2d70aab68a7749158358966
