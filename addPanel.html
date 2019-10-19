@@ -21,7 +21,7 @@
         <label for="money" class="label">Betrag: </label>
         <div class="field has-addons">
           <p class="control">
-            <input id= "value-input" class="input" placeholder="Betrag" name="money" type="number" min="0.01" step="0.01">
+            <input id= "value-input" class="input" placeholder="Betrag" name="money" type="number" min="0.01" step="0.01" required>
           </p>
           <p class="control">
             <a class="button is-static">
@@ -36,7 +36,7 @@
 
         <div class="input-inner-container">
         <label for="date" class="label">Datum: </label>
-        <input name="date" type="date" class="input" id="date-picker">
+        <input name="date" type="date" class="input" id="date-picker" required>
         </div>
       </div>
 
@@ -47,8 +47,8 @@
       <div class="field is-grouped">
             <div class="control">
               <div class="select is-primary">
-                <select id="selection">
-                  <option disabled selected>-Kategorie auswählen-</option>
+                <select id="selection" required>
+                  <option value="" disabled selected>-Kategorie auswählen-</option>
                   <!--Auswahl soll aus abgespeicherten Kategorien besteh-->
                   <option>dynamisch geladener Inhalt</option>
                 </select>
