@@ -32,6 +32,11 @@ html, body {
     background-color: #ecf0f1;
 }
 
+.input-outer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .input-inner-container {
   width: 49%;
 }
@@ -45,11 +50,6 @@ form {
     width: 400px;
     display: block;
     margin: 50px auto;
-}
-
-form > div {
-  display: flex;
-  justify-content: space-between;
 }
 
 form > textarea {
