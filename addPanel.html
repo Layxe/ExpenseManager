@@ -2,9 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.11/js/select2.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.11/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
     <style>
@@ -50,7 +52,7 @@
             <div class="control">
               <div class="select is-primary">
                 <select id="selection" required>
-                  <option value="" disabled selected>-Kategorie auswählen-</option>
+                  <option value="" disabled>-Kategorie auswählen-</option>
                   <!--Auswahl soll aus abgespeicherten Kategorien besteh-->
                   <option>dynamisch geladener Inhalt</option>
                 </select>
@@ -70,6 +72,13 @@
               </a>
           </div>
       </div>
+
+      <!-- Testauswahlfeld -->
+      <select class="js-example-basic-single">
+        <option value="">-Kategorie auswählen-</option>
+        <!--Auswahl soll aus abgespeicherten Kategorien besteh-->
+        <option value="">dynamisch geladener Inhalt</option>
+      </select>
 
       <br>
 

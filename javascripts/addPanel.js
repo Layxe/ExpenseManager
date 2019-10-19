@@ -15,6 +15,10 @@ function formatDate(date) {
   return [year, month, day].join('-');
 }
 
+$(document).ready(function() {
+    $('select.js-example-basic-single').select2();
+});
+
 let datePicker = document.getElementById('date-picker')
 
 let desc = document.getElementById('description')
