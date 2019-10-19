@@ -15,7 +15,7 @@ function formatDate(date) {
   return [year, month, day].join('-');
 }
 
-document.getElementById('date-picker').value = formatDate(new Date());
+let datePicker = document.getElementById('date-picker')
 
 let desc = document.getElementById('description')
 let descButton = document.getElementById('descr-button')
@@ -24,6 +24,11 @@ let descArea = document.getElementById('descr-textarea')
 let value = document.getElementById('value-input')
 let selection = document.getElementById('selection')
 
+function setDateToday() {
+  datePicker.value = formatDate(new Date());
+}
+
+setDateToday()
 
 // Funktionen für die Beschreibung
 // #####################################################################################################################
@@ -64,6 +69,6 @@ function show() {
 
    selection.selectedIndex = 0
    value.value = ""
-   document.getElementById('date-picker').value = formatDate(new Date())
+   setDateToday()
    hide()
  }
