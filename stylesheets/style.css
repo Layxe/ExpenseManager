@@ -60,10 +60,15 @@ a:active {
 #description {
     overflow: hidden;
     height: 0px;
-    transition: 500ms linear all;
+    transition: 250ms linear all;
 }
 
 #descr-button {
     overflow: hidden;
+<<<<<<< HEAD
     transition: 300ms linear opacity;
 }
+=======
+    transition: 100ms linear opacity;
+}
+>>>>>>> 145159fb5a85636ee2d70aab68a7749158358966

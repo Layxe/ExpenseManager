@@ -19,6 +19,7 @@ document.getElementById('date-picker').value = formatDate(new Date());
 
 let desc = document.getElementById('description')
 let descButton = document.getElementById('descr-button')
+let descArea = document.getElementById('descr-textarea')
 
 // Funktionen für die Beschreibung
 // #####################################################################################################################
@@ -33,6 +34,7 @@ function hide() {
   desc.style.marginTop = '0px'
   descButton.style.opacity = '1'
   descButton.style.cursor = 'pointer'
+  descArea.value = ''
 
 }
 
