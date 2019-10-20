@@ -58,6 +58,10 @@ function show() {
 // Funktionen für die Kategorien
 // #####################################################################################################################
 
+/**
+ * Aktualisiere das Dropdown mit den Kategorien
+ */
+
 function refreshCategories() {
 
   let categories = loadCategories()
@@ -72,6 +76,11 @@ function refreshCategories() {
 }
 
 refreshCategories()
+
+/**
+ * Füge eine neue Kategorie hinzu
+ * @param {string} name Name der neuen Kategorie
+ */
 
 function saveCategory(name) {
 
@@ -89,6 +98,11 @@ function saveCategory(name) {
 
 }
 
+/**
+ * Lösche eine Kategorie
+ * @param {string} name Name der Kategorie
+ */
+
 function deleteCategory(name) {
 
   let categories = loadCategories()
@@ -105,6 +119,10 @@ function deleteCategory(name) {
 
 }
 
+/**
+ * Lade die Kategorien
+ */
+
 function loadCategories() {
 
   return JSON.parse(fs.readFileSync('./data/category.json'))
@@ -114,11 +132,19 @@ function loadCategories() {
 // Darstellung der Modals / Dialogs
 // #####################################################################################################################
 
+/**
+ * Zeige den add-category modal
+ */
+
 function showAddCategory() {
 
   document.getElementById('add-category').style.display = 'block'
 
 }
+
+/**
+ * Speichere die neue Kategorie und verstecke den Dialog
+ */
 
 function finishAddCategory() {
 
@@ -134,6 +160,10 @@ function finishAddCategory() {
 
 }
 
+/**
+ * Verstecke den Katogrie Dialog
+ */
+
 function hideAddCategory() {
 
   document.getElementById('add-category').style.display = 'none'
@@ -141,10 +171,17 @@ function hideAddCategory() {
 
 }
 
+/**
+ * Zeige den löschen Dialog
+ */
 
 function showDeleteModal() {
   document.getElementById('delete-modal').style.display = 'block'
 }
+
+/**
+ * Vestecke den löschen Dialog
+ */
 
 function  hideDeleteModal() {
   document.getElementById('delete-modal').style.display = 'none'
