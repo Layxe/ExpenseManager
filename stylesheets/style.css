@@ -76,3 +76,8 @@ a:active {
     overflow: hidden;
     transition: 100ms linear opacity;
 }
+
+
+.modal > .modal-card {
+    margin-top: 10vh;
+}

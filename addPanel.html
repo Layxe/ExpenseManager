@@ -49,7 +49,7 @@
       <div class="field is-grouped">
             <div class="control">
               <div class="select is-primary">
-                <select>
+                <select id="categories">
                   <option>Kategorie auswählen</option>
                   <!--Auswahl soll aus abgespeicherten Kategorien besteh-->
                   <option>dynamisch geladener Inhalt</option>
@@ -58,7 +58,7 @@
             </div>
 
             <div class="buttons">
-              <a href="#" class="button is-success">
+              <a href="#" class="button is-success" onclick="showAddCategory()">
                 <span class="icon">
                   <i class="fas fa-plus"></i>
                 </span>
@@ -72,6 +72,26 @@
       </div>
 
       <br>
+
+      <!-- Dialoge für die Kategorien-->
+      <!-- ######################################################################################################### -->
+
+      <div class="modal" id="add-category">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Kategorie hinzufügen</p>
+            <button class="delete" aria-label="close" onclick="hideAddCategory()"></button>
+          </header>
+          <section class="modal-card-body">
+            <input class="input" type="text" placeholder="Name..." id="category-input">
+          </section>
+          <footer class="modal-card-foot">
+            <div class="button is-success" onclick="finishAddCategory()">Speichern</div>
+            <div class="button" onclick="hideAddCategory()">Abbrechen</div>
+          </footer>
+        </div>
+      </div>
 
       <!-- Beschreibung Input -->
       <!-- ######################################################################################################### -->

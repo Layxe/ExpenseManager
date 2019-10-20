@@ -1,3 +1,5 @@
+const fs = require('fs')
+
 // Funktionen um das Datum standardmäßig einzufügen
 // #####################################################################################################################
 
@@ -52,3 +54,86 @@ function show() {
   // Ändere den Cursor dazu, dass nichts passiert, wenn man drüber hovert
   descButton.style.cursor = 'default' 
 }
+
+// Funktionen für die Kategorien
+// #####################################################################################################################
+
+function refreshCategories() {
+
+  let categories = loadCategories()
+  let element    = document.getElementById('categories')
+
+  element.innerHTML = ''
+
+  categories.forEach(val => {
+    element.innerHTML += `<option>${val}</option>`
+  });
+
+}
+
+function saveCategory(name) {
+
+  let categories = loadCategories()
+
+  if (categories.indexOf(name) != -1) {
+    alert('Category already exists!')
+    return
+  }
+
+  categories.push(name)
+  fs.writeFileSync('./data/category.json', JSON.stringify(categories))
+
+  refreshCategories()
+
+}
+
+function deleteCategory(name) {
+
+  let categories = loadCategories()
+
+  if (categories.indexOf(name) == -1) {
+    alert('Category does not exist!')
+    return
+  }
+
+  categories.splice(categories.indexOf(name), 1)
+  fs.writeFileSync('./data/category.json', JSON.stringify(categories))
+
+  refreshCategories()
+
+}
+
+function loadCategories() {
+
+  return JSON.parse(fs.readFileSync('./data/category.json'))
+
+}
+
+function showAddCategory() {
+
+  document.getElementById('add-category').style.display = 'block'
+
+}
+
+function finishAddCategory() {
+
+  let name = document.getElementById('category-input').value
+  
+  if (name == null || name.length == 0) {
+    return
+  }
+
+  saveCategory(name)
+
+  hideAddCategory()
+
+}
+
+function hideAddCategory() {
+
+  document.getElementById('add-category').style.display = 'none'
+  document.getElementById('category-input').value = ''
+
+}
+
+refreshCategories()
