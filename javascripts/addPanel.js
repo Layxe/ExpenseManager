@@ -71,6 +71,8 @@ function refreshCategories() {
 
 }
 
+refreshCategories()
+
 function saveCategory(name) {
 
   let categories = loadCategories()
@@ -109,6 +111,9 @@ function loadCategories() {
 
 }
 
+// Darstellung der Modals / Dialogs
+// #####################################################################################################################
+
 function showAddCategory() {
 
   document.getElementById('add-category').style.display = 'block'
@@ -136,4 +141,11 @@ function hideAddCategory() {
 
 }
 
-refreshCategories()
+
+function showDeleteModal() {
+  document.getElementById('delete-modal').style.display = 'block'
+}
+
+function  hideDeleteModal() {
+  document.getElementById('delete-modal').style.display = 'none'
+}
