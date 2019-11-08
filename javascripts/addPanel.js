@@ -16,7 +16,11 @@ function formatDate(date) {
 }
 
 $(function() {
-	$('#select').selectize();
+	$('#select').selectize({
+    create: function(input, callback) {
+      callback();
+    }
+  });
 });
 
 let datePicker = document.getElementById('date-picker')
