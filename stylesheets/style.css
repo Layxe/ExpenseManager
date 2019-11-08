@@ -80,3 +80,7 @@ a:active {
 #value-input {
   text-align: right;
 }
+
+#select-container {
+  widows: 75% inherit;
+}
