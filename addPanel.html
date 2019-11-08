@@ -2,12 +2,8 @@
 <html>
   <head>
     <meta charset="UTF-8">
-
-    <script defer src="javascripts/fontawesome.js"></script>
-
-
-    <link href="stylesheets/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
     <style>
       body {
@@ -49,16 +45,15 @@
       <!-- ######################################################################################################### -->
 
       <div class="field is-grouped">
+            <div class="control">
+              <div class="select is-primary">
                 <select id="selection" required>
-                  <option></option>
+                  <option value="" disabled selected>-Kategorie auswählen-</option>
                   <!--Auswahl soll aus abgespeicherten Kategorien besteh-->
-                  <option value="1">Kategorie 1-</option>
-                  <option value="2">Kategorie 2-</option>
-                  <option value="3">Kategorie 3-</option>
-                  <option value="4">Kategorie 4-</option>
-                  <option value="5">Kategorie 5-</option>
-                  <option value="6">dynamisch geladener Inhalt</option>
+                  <option>dynamisch geladener Inhalt</option>
                 </select>
+              </div>
+            </div>
 
             <div class="buttons">
               <a href="#" class="button is-success">
@@ -126,11 +121,7 @@
         </a>
     </div>
     </form>
-    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
 
-    <script type="text/javascript" src="javascripts/jquery.min.js"></script>
-    <script src="javascripts/select2.min.js"></script>
-    <script>if (window.module) module = window.module;</script>
     <script src="javascripts/addPanel.js"></script>
   </body>
 </html>
