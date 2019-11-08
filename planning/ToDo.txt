@@ -1,0 +1,24 @@
+-fix select field
+  >implement adding of entered item
+  >load options from JSON file
+  >add added option to JSON file
+  >allow max 1 category to be chosen
+
+-submitting form
+  >check inputs
+  >save valid inputs into JSON file
+  >success animation?
+  >after success clear form to allow new entry or return home?
+
+-displaying of Data
+  >chose framework for cleanly displaying data from JSON file
+  >sort data beforehand to allow better performance
+  >implement filter methods (date, category, highest/lowest first, etc...)
+  >allow editing of category list (!careful of consequences when removing used categories!)
+  >scalable/full screen?? for better visibility of large data sets
+  >maybe implement some basic regression methods (for practice) to predict further spending or reveal bad spending habits
+  >custom colours for a better overview
+
+-homepage
+  >make homepage more colourful, black/white is pretty boring
+  >add hover labels for more information
