@@ -15,13 +15,27 @@ function formatDate(date) {
   return [year, month, day].join('-');
 }
 
-$(function() {
-	$('#select').selectize({
+var categoryLoader = function(query, callback) {
+  var request = new XMLHttpRequest();
+  request.open("GET", "json/categories.json");
+  request.onload = function () {
+      var categoryData = JSON.parse(request.responseText);
+      callback(categoryData);
+  };
+  request.send();
+};
+
+	var selectize = $('#select').selectize({
+    maxItems: 1,
+    valueField: "name",
+    labelField: "name",
+    searchField: "name",
+    preload: true,
     create: function(input, callback) {
       callback();
-    }
+    },
+    load: categoryLoader
   });
-});
 
 let datePicker = document.getElementById('date-picker')
 
@@ -75,8 +89,8 @@ function show() {
  */
  function reset() {
 
-   selection.selectedIndex = 0
-   value.value = ""
-   setDateToday()
-   hide()
+   selectize[0].selectize.clear();
+   value.value = "";
+   setDateToday();
+   hide();
  }

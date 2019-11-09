@@ -1,8 +1,11 @@
++ := task has been completed
+> := task not yet completed
+
 -fix select field
   >implement adding of entered item
-  >load options from JSON file
+  +load options from JSON file
   >add added option to JSON file
-  >allow max 1 category to be chosen
+  +allow max 1 category to be chosen
 
 -submitting form
   >check inputs
