@@ -1,0 +1,26 @@
+[
+  {
+    "name":"Miete"
+  },
+  {
+    "name":"Strom"
+  },
+  {
+    "name":"GEZ"
+  },
+  {
+    "name":"Essen"
+  },
+  {
+    "name":"Unterhaltung"
+  },
+  {
+    "name":"Klamotten"
+  },
+  {
+    "name":"Technik"
+  },
+  {
+    "name":"Sonstiges"
+  }
+]
