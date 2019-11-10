@@ -1,26 +1,29 @@
 [
   {
-    "name":"Miete"
+    "name": "Miete"
   },
   {
-    "name":"Strom"
+    "name": "Strom"
   },
   {
-    "name":"GEZ"
+    "name": "GEZ"
   },
   {
-    "name":"Essen"
+    "name": "Essen"
   },
   {
-    "name":"Unterhaltung"
+    "name": "Unterhaltung"
   },
   {
-    "name":"Klamotten"
+    "name": "Klamotten"
   },
   {
-    "name":"Technik"
+    "name": "Technik"
   },
   {
-    "name":"Sonstiges"
+    "name": "Sonstiges"
+  },
+  {
+    "name": "Uni"
   }
 ]

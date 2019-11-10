@@ -18,6 +18,7 @@ function formatDate(date) {
 const fs = require('fs');
 
 var categoryLoader = function(query, callback) {
+
   var request = new XMLHttpRequest();
   request.open("GET", "json/categories.json");
   request.onload = function () {
