@@ -15,6 +15,8 @@ function formatDate(date) {
   return [year, month, day].join('-');
 }
 
+const fs = require('fs');
+
 var categoryLoader = function(query, callback) {
   var request = new XMLHttpRequest();
   request.open("GET", "json/categories.json");
@@ -32,7 +34,13 @@ var categoryLoader = function(query, callback) {
     searchField: "name",
     preload: true,
     create: function(input, callback) {
-      callback();
+
+      fs.readFile("json/categories.json", function (err, data) {
+          var json = JSON.parse(data);
+          json.push({"name":input});
+          fs.writeFile("json/categories.json", JSON.stringify(json, null, 2), function(err, result) {});
+      })
+      callback({"name":input});
     },
     load: categoryLoader
   });
